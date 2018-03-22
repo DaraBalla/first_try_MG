@@ -1,0 +1,53 @@
+
+/*
+* {
+    box-sizing: border-box;
+    border: 1px solid red;
+}*/
+
+
+h3 {
+    margin: 10px;
+    padding-top: 10px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0.0625em;
+}
+
+.review {
+    font-style: italic;
+    font-size: small;
+}
+
+.feature {
+    font-weight: bold;
+}
+
+.card {
+    border: 1px solid rgb(212, 212, 212);
+    width: 325px;
+    box-shadow: 5px 5px 0 0 rgba(184, 183, 183, 0.575);
+    background: linear-gradient(rgb(170, 166, 166), orangered);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;     
+}
+
+img {
+   width: 295px;
+   height: 200px;
+   margin: 10px 0px 0px 10px;
+   border: 5px double rgb(170, 166, 166);
+   border-radius: 10px;
+}
+
+.text {
+    border: 5px solid rgb(170, 166, 166);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+}
+
+.list {
+    list-style: none outside none;
+    padding: 0px;
+}

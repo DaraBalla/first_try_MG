@@ -1,0 +1,413 @@
+* {
+    box-sizing: border-box;
+}
+
+h1, 
+h2, 
+h3 {
+    font-family: "Krona One", sans-serif;
+}
+
+a, 
+p {
+    font-family: "PT Sans", sans-serif;
+}
+
+body {
+    background: #acacac;
+}
+
+/*
+*
+*  HEADER
+*
+*/
+
+#header {
+    display: inline-flex;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    margin-top: -20px;
+    margin-left: -8px;
+    z-index: 10;
+    background-image: linear-gradient(to left, grey 10%, white 90%);
+}
+
+.logo {
+    vertical-align: top;
+}
+
+.logo_img {
+    height:75px;
+    margin-top: 15px;
+}
+
+.red {
+    color: red;
+}
+
+.name {
+    width: auto;
+    margin-right: auto;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.nav {
+    width: 400px;
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.nav_item {
+    display: inline-block;
+    margin: 10px;
+    border-radius: 25px;
+    border-bottom: 1px solid red;
+    border-right: 2px solid red;
+    padding: 8px;
+    background-color: grey;
+    list-style: none
+}
+
+.nav_item a:hover {
+    color: red;
+    transition: 0.15s;
+}
+
+.nav_item a {
+    font-weight: 1000;
+    color: black;
+    text-decoration: none;
+}
+
+.nav_burger {
+    display: none;
+}
+
+/*
+*
+*  MAIN
+*
+*/
+
+#main {
+    width: 100%;
+    position: absolute;
+    margin-top: 40px;
+}
+
+/*
+*
+*  ABOUT ME
+*
+*/
+
+/*TODO: make a "developer" word starts whole black and slowly goes to red from left to right to become whole red and repeat it*/
+
+.my_description {
+    font-weight: bolder;
+    font-size: 2.5em;
+    font-family: "Krona One", sans-serif;
+    text-align: center; 
+    line-height: 2em;
+    padding: 0 1em;
+    margin-top: 80px; 
+}
+
+.web {
+    animation: pulse 10s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    color: #000;
+  }
+  50% {
+    color: #f00;
+  }
+}
+
+.my_story {
+    font-size: 1.2em;
+    padding: 0 30px;
+    text-align: center;
+}
+
+/*
+*
+*  PORTFOLIO
+*
+*/
+
+#portfolio {
+    padding-top: 58px;
+}
+
+.portf_title {
+    text-align: center;
+    background-image: radial-gradient(circle, grey 40%, #acacac 60%);
+    margin-left: -8px;
+}
+
+.portf_projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: auto;
+    padding: 20px;
+}
+
+.project {
+    width: 250px;
+    padding: 10px 20px;
+    height: 350px;
+    margin: auto;
+}
+
+.project_img {
+    box-shadow: 10px 10px 10px 3px black;
+    border: 1px solid black;
+    width: 200px;
+    height: 150px;;
+}
+
+.project_img:hover {
+    opacity: 0.7;
+    transition: 0.3s;
+}
+
+/*
+*
+*  FOOTER
+*
+*/
+
+#footer {
+    display: block;
+    position: relative;
+    bottom: 0;
+    width: 102%;
+    padding-top: 60px;
+    font-family: "PT Sans", sans-serif;
+    font-weight: bolder;
+    margin-left: -8px;
+    padding-left: 15px;
+    background-color:gray;
+}
+
+/*
+*
+*  CONTACT
+*
+*/
+
+.contact_title {
+    text-align: center;
+    margin: 1em;
+}
+
+.contact_box {
+    width: 40%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.contact_icons {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.icon {
+    margin: 10px;
+    justify-content: center;
+}
+
+.icon img {
+    width: 50px;
+    height: 50px;
+}
+
+.icon img:hover {
+    opacity: 0.7;
+}
+
+#heart {
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 150px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    margin-top: -400px;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: black;
+    padding: 10px 0;
+    height: 150px;
+    font-family: "Krona One", sans-serif;
+    font-size: 2em;
+}
+
+/* Add Animation */
+.modal-content, 
+#caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.x {
+    position: absolute;
+    top: 100px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.x:hover,
+.x:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/*
+*
+*  ----------MEDIA QUERIES-----------
+*
+*/
+
+@media screen and (max-width: 1558px) {
+    .portf_projects {
+        max-width: 940px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 878px) {
+    .my_story {
+        width: 860px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .name {
+        font-size: 0.7em;
+        width: 130px;
+        margin-top: 15px;
+    }
+
+    .logo_img {
+        height:70px;
+        margin-top: 23px;
+    }
+
+    #header {
+        height: 93px;
+    }
+
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .nav_burger {
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin-top: 33px;
+        margin-right: 20px;
+    }
+
+    .nav {
+        position: absolute;
+        top: 82px;
+        left: -20px;
+        z-index: 11;
+        background-image: linear-gradient(to left, rgb(219, 217, 217), white);
+        width: 200px;
+        border-radius: 0 0 10% 0;
+        position: absolute;
+        transform: translate(-420px, 90px);
+        transition: transform 0.3s ease;
+    }
+    
+    .nav.open {
+        transform: translate(0, 0);
+    }
+      
+    .nav_item {
+        display: list-item;
+        background-color: #acacac;
+        border-bottom: 1px solid #ff0000;
+        border-right: 2px solid #ff0000;
+        margin: 20px;
+    }
+
+    .my_description {
+        font-size: 1.7em;
+        line-height: 2em;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    #caption {
+        font-size: 1em;
+        margin-top: -300px;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    #caption {
+        margin-top: -200px;
+    }
+}
+
+@media screen and (max-width: 280px) {
+    #caption {
+        margin-top: -150px;
+    }
+}

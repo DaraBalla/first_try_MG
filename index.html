@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DweB portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Krona+One|PT+Sans" rel="stylesheet">  
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
+<body>
+
+
+    <header id="header">
+        
+        <div class="logo">
+            <a href="#home"><img class="logo_img" src="img/logo.png" alt="Udacity logo"></a>
+        </div>
+
+        <div class="name">
+            <h1>Dara <span class="red">B</span>alla</h1>
+        </div>
+
+        <nav class="nav">
+            <ul class="nav_list">
+                <li class="nav_item"><a href="#main">About Me</a></li>
+                <li class="nav_item"><a href="#portfolio">Portfolio</a></li>
+                <li class="nav_item"><a href="#footer">Contact Me</a></li>
+            </ul>
+        </nav>
+
+        <img class="nav_burger" src="img/activity-feed-128_b.png" alt="navigation bars">
+
+    </header>
+
+
+
+    <div id="home"></div> <!--to navigate here, if sbd click on the logo-->
+
+
+
+    <section id="main">
+
+
+        <section id="about_me">
+
+            <p class="my_description">That's me.<br>A front-end <strong class="web">web</strong> developer.</p>
+            <p class="my_story"><em>My story has started in the summer 2017 with a basic html/css course. After some hard work 
+                and a handful of luck I was granted a scholarship by Google and my participation in Front-End Web Developer Nanodegree Program 
+                with Udacity become a reality. Nowadays, the web development is a big part of my everyday interest.</em></p>
+            <p class="my_story"><strong>The result of my effort you can see underneath.</strong></p>
+        
+        </section>
+
+
+        <section id="portfolio">
+
+            <h2 class="portf_title">Portfolio</h2>
+
+            <div class="portf_projects">
+
+                <div class="project">
+                    <a href="project1/card.html" target="_blank"><img class="project_img" src="project1/1280px-Panthera_tigris_altaica_2.jpg" alt="Project 1: Animal trading card - Siberian tiger"></a>
+                    <h3 class="project_title">The Siberian Tiger</h3>
+                    <p class="project_description">Simple animal trading card created by using HTML and CSS</p>
+                </div>
+
+                <div class="project">
+                    <a href="#"><img class="project_img" src="img/code.jpg" alt="Project 2"></a>
+                    <h3 class="project_title">Awesome project's name</h3>
+                    <p class="project_description">this text is about project details and is about three lines long</p>
+                </div>
+
+                <div class="project">
+                    <a href="#"><img class="project_img" src="img/code.jpg" alt="Project 3"></a>
+                    <h3 class="project_title">Name of project No. 3</h3>
+                    <p class="project_description">this text is about project details and is about three lines long</p>
+                </div>
+
+                <div class="project">
+                    <a href="#"><img class="project_img" src="img/code.jpg" alt="Project 4"></a>
+                    <h3 class="project_title">Name of project No. 4</h3>
+                    <p class="project_description">this text is about project details and is about three lines long</p>
+                </div>
+
+                <div class="project">
+                    <a href="#"><img class="project_img" src="img/code.jpg" alt="Project 5"></a>
+                    <h3 class="project_title">Name of project No. 5</h3>
+                    <p class="project_description">this text is about project details and is about three lines long</p>
+                </div>
+
+                <div class="project">
+                    <a href="#"><img class="project_img" src="img/code.jpg" alt="Project 6"></a>
+                    <h3 class="project_title">Name of project No. 6</h3>
+                    <p class="project_description">this text is about project details and is about three lines long</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer id="footer">
+
+            <section id="contact">
+
+                <h2 class="contact_title">Let's try to contact me. I'll try to respond.</h2>
+
+                <div class="contact_box">
+                    <ul class="contact_icons">
+                        <li class="icon"><a href="https://www.facebook.com/darjaballa" target="_blank"><img src="img/facebook-7-256.png" alt="facebook icon"></a></li>
+                        <li class="icon"><a href="https://www.linkedin.com/in/darja-ballarinov%C3%A1-4786b087/" target="_blank"><img src="img/linkedin-4-256.png" alt="linkedin icon"></a></li>
+                        <li class="icon"><img id="email" src="img/at-2-256.png" alt="email icon"></li>
+                        <li class="icon"><img id="heart" src="img/heart-5-256.png" alt="red heart"></li>
+                    </ul> 
+
+                    <div id="hugModal" class="modal">
+                        <span class="x">&times;</span>
+                        <img class="modal-content" id="big_img" alt="big heart">
+                        <div id="caption">This is a free HUG for you! =)</div>
+                    </div>                       
+                    
+                </div>
+
+            </section>
+ 
+        </footer>
+
+
+    </section>
+
+    
+
+    <script>
+        
+        /*
+         * Open the modal when the heart icon is clicked.
+         */
+        
+            // Get the modal
+        var modal = document.getElementById("hugModal");
+        
+            // Get the image and insert it inside the modal
+        var img = document.getElementById("heart");
+        var bigImg = document.getElementById("big_img");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            bigImg.src = this.src;
+            captionText.innerHTML
+        }
+        
+            // Get the <span> (x) element that closes the modal
+        var closex = document.getElementsByClassName("x")[0];
+        
+            // When sbd clicks on <span> (x), close the modal
+        closex.onclick = function() { 
+            modal.style.display = "none";
+        }
+        
+        
+        
+        /*
+         * Open sbd's email client to write me an email.
+         */
+
+        var email = document.getElementById("email");
+
+        email.onclick = function() {
+            open("mailto:darja.ballarinova@gmail.com")
+        }
+
+
+        /*
+         * Open the drawer when the menu icon is clicked.
+         */
+
+      var menu = document.querySelector('.nav_burger');
+      var main = document.querySelector('section');
+      var drawer = document.querySelector('.nav');
+
+      menu.addEventListener('click', function(e) {
+        drawer.classList.toggle('open');
+        e.stopPropagation();
+      });
+      main.addEventListener('click', function() {
+        drawer.classList.remove('open');
+      });
+
+
+    </script>
+          
+
+</body>
+
